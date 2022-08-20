@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div> <br>
+        <!--Prompt number of characters-->
+        <label for="characters">Number of characters (8 to 128 characters):</label>
+        <input type="number" id="passwordLength" name="quantity"  min="8" maximum="128"> <br>
+        <!--Include lowercase characters-->
+        <label for="lowerCase">Include lowercase characters:</label>
+        <input class="passwordCriteria" type="checkbox" id="lowercase" name="name" maxlength="4" size="6"><br>
+        <!--Include upperCase characters-->
+        <label for="upperCase">Include uppercase characters:</label>
+        <input class="passwordCriteria" type="checkbox" id="uppercase" name="name" maxlength="4" size="6"><br>  
+        <!--Include numeric characters-->
+        <label for="numeric"> Include numeric characters:</label>
+        <input class="passwordCriteria" type="checkbox" id="numbers" name="quantity"  min="8" maximum="128"> <br>
+        <!--Include special characters-->
+        <label for="specialCharacters">Include special characters:</label>
+        <input class="passwordCriteria" type="checkbox" id="specialCharacters" name="name" maxlength="4" size="6"><br>  
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+         <h3> Required password criteria</h3>
+        <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
