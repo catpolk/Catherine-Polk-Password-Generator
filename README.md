@@ -11,6 +11,9 @@
 
 - The project stand out becasue it generates the password besed on users preferences and shows what the program created in the text area, if the user doesn't like the password, they can re-generate the password by simply clicking on the "generate password" button. 
 
+![Screenshot](passwordgenerator-screenshot.jpeg?raw=true "Password generator")
+
+
 
 
 
