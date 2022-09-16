@@ -5,6 +5,7 @@ function generatePassword(){
 
   if(passwordLength < 8 || passwordLength > 128) {
     alert("Password lenght should be between  8 and 128 characters. Try again.");
+    return null;
   }
 //The document.querySelector(#id) returns the first Element within the document (index.html) that matches the specified selector. 
 //.checked returens true or false whether check box is checked or no. 
@@ -18,9 +19,10 @@ function generatePassword(){
   
 
 //reversed if statement that checked if at least one of the password criteria were checked. 
-  if((useLowerCase || useUpperCase || useNumbers || useSpecialCharacters) === false){
+  if(useLowerCase == false && useUpperCase == false  && useNumbers == false  && useSpecialCharacters == false){
     //an alert message that alerts a user when tehy don't select at least one password criteria 
     alert("Check at least one password criteria")
+    return null;
   }
 //four variables that will be the source of the password criteria 
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
